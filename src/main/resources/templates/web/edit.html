@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<h2>Edit</h2>
+<form name="update" action="/update" method="POST">
+    <label hidden>ID: </label>
+    <input hidden readonly="readonly" type="text" name="userId" id="userId" th:value="${user.getId()}"><br><br>
+
+    <label>Email: </label>
+    <input type="text" name="userEmail" id="userEmail" th:value="${user.getEmail()}"><br><br>
+
+    <label>Password: </label>
+    <input type="text" name="userPassword" id="userPassword" th:value="${user.getPassword()}"><br><br>
+
+    <label>First Name: </label>
+    <input type="text" name="userFirstName" id="userFirstName" th:value="${user.getFirstName()}"><br><br>
+
+    <label>Last Name: </label>
+    <input type="text" name="userLastName" id="userLastName" th:value="${user.getLastName()}"><br><br>
+
+    <label>Age: </label>
+    <input type="text" name="userAge" id="userAge" th:value="${user.getAge()}"><br><br>
+
+    <input type="submit" value="Update">
+</form>
+
+<form name="showAll" action="/show">
+    <input type="submit" value="Back">
+</form>
+
+</body>
+
+</html>
